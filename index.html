@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Function Handson</h1>
+    <h2>
+      Q1. Create one function with zero parameter having a console statement.
+    </h2>
+    <p>
+      => Output is created using single function. Inside function we used simple
+      console.log statement to display the output. We can see the output of the
+      function in console tab.
+    </p>
+
+    <pre>
+        Code:
+        function display() {
+            console.log("Answer of Question 1.");
+        }
+        display();
+      </pre
+    >
+
+    <h2>
+      Q2. Create one function which takes two values as a parameter and print
+      the sum of them as "Sum of 3, 4 is 7".
+    </h2>
+    <span></span>
+    <pre>
+        Code:
+        var num1 = 3;
+        var num2 = 4;
+        let output = document.querySelectorAll("span");
+        console.log(output);
+        function cal(a, b) {
+            return a + b;
+        }
+        let addition = cal(num1, num2);
+        output[0].innerHTML = `=> Sum of ${num1}, ${num2} is ${addition}`;
+      </pre
+    >
+    <h2>Q3. Create one arrow function.</h2>
+    <p>=> <span></span>. This is created using Arrow Function.</p>
+    <pre>
+        Code:
+        var multiply = (v, w) => {
+            return v * w;
+        };
+        let resultMultiply = multiply(2, 3);
+        output[1].innerHTML = `Multiply of 2, 3 is ${resultMultiply}`;
+    </pre>
+    <h2>
+      Q4.
+      <pre>
+Print output: 
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
+girl ();</pre
+      >
+    </h2>
+    <p>
+      => In the above example, we can see variable x is defined two times so the
+      variable is stored in the memory. Now inside the function, variable is
+      first printed using console.log and then the variable is initialized with
+      the value. This creates a hoisting that is the variable will be displayed
+      as undefined. We can see the output in console tab.
+    </p>
+    <h2>
+      Q5.
+      <pre>
+Print output: 
+var x = 21;
+girl ();
+console.log(x)
+function girl() {
+    console.log(x);
+    var x = 20;
+};</pre
+      >
+    </h2>
+    <p>
+      => In the above example, we can see variable x is declared and defined two
+      times one inside function and one outside the function. so the variable is
+      stored in the memory. Now inside the function, variable is first printed
+      using console.log and then the variable is initialized with the value.
+      This creates a hoisting that is the variable will be displayed as
+      undefined. But here we see there is one more console.log before function.
+      This console is writtern after the variable is initialized. So the first
+      console will display the output and the second console will display as
+      undefined. We can see the output in console tab.
+    </p>
+
+    <h2>
+      Q6.
+      <pre>
+Print output
+
+var x = 21;
+a();
+b();
+
+  function a() {
+    
+   x = 20;
+  console.log(x);
+};
+ function b() {
+    
+    x = 40;
+   console.log(x);
+};</pre
+      >
+    </h2>
+    <p>
+      => In the above example, we can see variable x is declared and two
+      functions are created named a and b. Inside this function the value is
+      first changed and then printed using console.log. We can see the output in
+      console tab.
+    </p>
+    <h2>
+      Q7. Write a function that accepts parameter n and returns factorial of n.
+    </h2>
+    <p>=> <span></span></p>
+    <pre>
+            code:
+            function factorial(n) {
+                let fact = 1;
+                for (let i = 1; i &lt= n; i++) {
+                    fact = fact * i;
+                }
+                return fact;
+            }
+            let outputFact = factorial(5);
+            output[2].innerHTML = `Factorial of 5 is ${outputFact}.`;
+</pre
+    >
+
+    <!-- Day2 -->
+    <h1>Day 2</h1>
+    <h2>
+      Q1.
+      <pre>
+Guess the Output
+
+function FindSum(a, b){
+    return a + b;
+}
+
+function DisplayData(data, batch){
+    console.log(`i am from ${data} and My batch is EA${batch}`)
+}
+
+DisplayData(""PrepBytes"", FindSum(10, 9));</pre
+      >
+    </h2>
+    <p>
+      => In the above program, we see two functions named "FindSum" and
+      "DisplayData". FindSum returns the sum of two variables which are passed
+      as parameters and DisplayData returns the output using console.log. But
+      FindSum is called inside DisplayData function. Hence first FindSum is
+      called and the return value is stored in DisplayData and is passed to the
+      function. We can see the output in console tab.
+    </p>
+    <h2>
+      Q2.
+      <pre>
+Guess the output
+
+Abc();
+const Abc = function(){
+    let value = 20;
+    console.log(value);
+}</pre
+      >
+    </h2>
+    <p>
+      => Here we can see the output is throughing an error message in console
+      tab. This is because we used variable to store the function but we called
+      the variable before the function is been initialized.
+    </p>
+    <h2>
+      Q3.
+      <pre>
+Guess the output
+
+var a = 10;
+(function (){
+    console.log(a);
+    var a = 20;
+})();</pre
+      >
+    </h2>
+    <p>
+      => In the above example, we can see variable a is defined two times so the
+      variable is stored in the memory. Now inside the function, variable is
+      first printed using console.log and then the variable is initialized with
+      the value. This creates a hoisting that is the variable will be displayed
+      as undefined as inside the function a new variable will be created but the
+      value is initialized after printed. This will show the variable as
+      undefined. We can see the output in console tab.
+    </p>
+    <h2>
+      Q4.
+      <pre>
+Guess the Output
+const greet =  function(name){
+    return function(m){
+    
+        console.log(`Hi!! ${name}, ${m}`);
+    }
+}
+  
+const greet_message = greet('EA19');
+greet_message("Welcome To PrepBytes")</pre
+      >
+    </h2>
+    <p>
+      => In the above problem, we can see inside the function anohter function
+      is returned. Inside the returned function, parameters of the inner
+      function and the outer function is used. After the function the first line
+      calls the outer function and the value is passed to the function. Then the
+      second line calls the inner function and the value is passed to the
+      function. We can see the output in console tab.
+    </p>
+    <script src="./script.js"></script>
+  </body>
+</html>

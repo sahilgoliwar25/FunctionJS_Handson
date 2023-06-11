@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+body {
+  background-color: rgb(165, 255, 225);
+}
+pre {
+  background-color: rgb(108, 255, 206);
+  width: max-content;
+  padding: 0.5em;
+}
